@@ -2,5 +2,5 @@
   "version": "3.2",
   "fecha": "2026-10-17",
   "notas": "Ahora puedo renovarte o ampliarte la licencia a distancia, sin que tengas que pegar ninguna licencia nueva. Para eso el programa necesita conectarse a internet al menos una vez cada 30 dias; si pasa mas tiempo sin conectar, podras seguir consultando y sacando PDF, pero no guardar cambios hasta que lo conectes. Incluye tambien las correcciones de la 3.1 en los precios de las piezas.",
-  "url": "https://github.com/gmfernandojesus/actualizaciones/releases/latest"
+  "url": "https://github.com/gmfernandojesus/actualizaciones/releases/download/v2026.10.17/Workshop.Tool.-.Instalador.exe"
 }
