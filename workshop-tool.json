@@ -1,10 +1,10 @@
 {
   "producto": "Workshop Tool",
-  "version": "3.4",
+  "version": "3.5",
   "fecha": "2026-10-17",
-  "notas": "A partir de esta versión el programa se actualiza solo: descarga la versión nueva por su cuenta y se instala con un clic, o al cerrar el programa.",
-  "url": "https://github.com/gmfernandojesus/actualizaciones/releases/download/workshop-tool-3.4/Workshop.Tool.-.Instalador.exe",
-  "sha256": "ef4057c854251658f0124daad932af5c3509907965da5314ef9be7ed4ab2e093",
-  "tamano": 21691742,
-  "firma": "h1ZFFiDuRvF2NoieQki9LThzj1In9D7-BQy0NU-E8yluddT91Xx5Jl2ACZgOhfAhDVgXHfjUGK12MjvViyv1DA"
+  "notas": "Nueva pestaña Cuentas: lo que has facturado, lo que has invertido en piezas y lo que ganas con las piezas y con la mano de obra, por días, semanas, meses o años. Corregido: en el formulario se veían a la vez el número de parte y el de factura.",
+  "url": "https://github.com/gmfernandojesus/actualizaciones/releases/download/workshop-tool-3.5/Workshop.Tool.-.Instalador.exe",
+  "sha256": "27789aa011b965b4a368ed565ceabb2b0ca2e61dcf6f5af9893d5ac6a230269b",
+  "tamano": 21710078,
+  "firma": "CxLAQPibWexqKlGbm2ivRpWTBC3_JnsE8vN92Zet5blJmsuXVUDMu9f_LOszRLgiBSvV7rSuSxTb1vmuuiPQDg"
 }
