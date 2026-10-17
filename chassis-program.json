@@ -1,6 +1,6 @@
 {
-  "version": "5.2",
+  "version": "5.3",
   "fecha": "2026-10-17",
-  "notas": "La licencia se comprueba sola por internet: las renovaciones llegan sin tener que pegar una licencia nueva. El ordenador tiene que conectarse a internet al menos una vez al mes.",
+  "notas": "Ahora se puede decidir que motos ve cada ordenador: las que no esten activadas no aparecen. Las motos que des de alta tu se guardan bien aunque el programa este en Archivos de programa.",
   "url": "https://github.com/gmfernandojesus/actualizaciones/releases/latest"
 }
