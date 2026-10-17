@@ -25,6 +25,17 @@ Están en la pestaña **[Releases](../../releases)** de este repositorio.
 
 A los clientes les aparece el aviso solos la próxima vez que abran el programa.
 
+## Cómo se publica una versión
+
+    python publicar.py "Workshop Tool" 3.5 "ruta\Workshop Tool - Instalador.exe" "Notas para el cliente"
+
+Crea la Release del programa (una por programa y versión), **firma el aviso
+con la clave del Administrador de licencias**, publica el puente de la 3.0 si
+es Workshop Tool y sube el aviso. Desde Workshop Tool 3.4 y Chassis Program
+5.5 los programas **se actualizan solos**: descargan el instalador, comprueban
+firma, tamaño y huella, y lo instalan con un clic o al cerrarse. El cliente
+nunca entra aquí. **Un aviso sin firmar no instala nada.**
+
 ## Reglas al publicar (las vigila el sistema solo)
 
 Hay tres protecciones para que un cliente que actualiza un programa nunca
