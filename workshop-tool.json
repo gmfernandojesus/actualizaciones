@@ -1,6 +1,6 @@
 {
-  "version": "3.1",
+  "version": "3.2",
   "fecha": "2026-10-17",
-  "notas": "Corregidos dos fallos al poner precios: las piezas elegidas en el desplegable de la fila se quedaban a 0 euros, y los precios escritos con coma (12,50) se perdian al guardar.",
+  "notas": "La licencia se comprueba sola por internet: las renovaciones llegan sin tener que pegar una licencia nueva. El ordenador tiene que conectarse a internet al menos una vez al mes.",
   "url": "https://github.com/gmfernandojesus/actualizaciones/releases/latest"
 }

@@ -1,6 +1,6 @@
 {
-  "version": "5.1",
+  "version": "5.2",
   "fecha": "2026-10-17",
-  "notas": "Instalador de Windows, licencias por ordenador y pestana de Ayuda con el manual del programa. Corregidos el calculo de la camara de aire y la geometria bajo carga (lanzamiento y avance).",
+  "notas": "La licencia se comprueba sola por internet: las renovaciones llegan sin tener que pegar una licencia nueva. El ordenador tiene que conectarse a internet al menos una vez al mes.",
   "url": "https://github.com/gmfernandojesus/actualizaciones/releases/latest"
 }
