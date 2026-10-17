@@ -1,10 +1,10 @@
 {
   "producto": "Workshop Tool",
-  "version": "3.6",
+  "version": "3.7",
   "fecha": "2026-10-17",
-  "notas": "Cuentas: ahora eliges directamente las fechas Desde y Hasta, el periodo que quieras. Los periodos de siempre (este mes, este trimestre...) quedan como atajos.",
-  "url": "https://github.com/gmfernandojesus/actualizaciones/releases/download/workshop-tool-3.6/Workshop.Tool.-.Instalador.exe",
-  "sha256": "b11455c03662b0fdb49453f58b191a3db449b12cc5966821b86ea88da16d1640",
-  "tamano": 21710988,
-  "firma": "7zEaupZdpfIWmw1C_jy-F8o-eLDHDSYjkhTcVjzZqh3KSUoghNyeq-Fp5hspqumpc8uzl0DqgtkcP5VKzXZ4BQ"
+  "notas": "Cuentas: nuevo botón Exportar PDF. Saca el informe con la cabecera de tu taller y las mismas fechas y filtros que tengas puestos, para guardarlo o mandárselo a tu gestoría.",
+  "url": "https://github.com/gmfernandojesus/actualizaciones/releases/download/workshop-tool-3.7/Workshop.Tool.-.Instalador.exe",
+  "sha256": "0d68835bf395f8c04c8b28cde5f6441c26be90ad7c1ec4b0a9f724cdf460a3e6",
+  "tamano": 21714274,
+  "firma": "RZ9PMKLNAeUbNnbXNnVafJyNfA1tUcXQhqs42x6n5_zXIaU7-upVk9DpJ7Hu-KkvJ3zhGUibci5dhVwMLO_MAA"
 }
