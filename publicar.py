@@ -86,20 +86,21 @@ def main():
 
     texto = json.dumps(datos, ensure_ascii=False, indent=2) + "\n"
     autor = ["-c", "user.name=gmfernandojesus", "-c", "user.email=gm.fernandojesus@gmail.com"]
+    mensaje = f"{programa} {version}\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"
     if programa in PUENTES:
         print("\n2) Puente para las instalaciones antiguas")
         puente = PUENTES[programa]
         ejecutar("git", "pull", "-q", "--ff-only", cwd=puente.parent)
         puente.write_text(texto, encoding="utf-8")
         ejecutar("git", "add", puente.name, cwd=puente.parent)
-        ejecutar("git", *autor, "commit", "-q", "-m", f"{programa} {version}", cwd=puente.parent)
+        ejecutar("git", *autor, "commit", "-q", "-m", mensaje, cwd=puente.parent)
         ejecutar("git", "push", "-q", "origin", "main", cwd=puente.parent)
 
     print("\n3) Aviso de versión (pasa por la comprobación antes de subirse)")
     ejecutar("git", "pull", "-q", "--ff-only")
     (CARPETA / f"{slug}.json").write_text(texto, encoding="utf-8")
     ejecutar("git", "add", f"{slug}.json")
-    ejecutar("git", *autor, "commit", "-q", "-m", f"{programa} {version}")
+    ejecutar("git", *autor, "commit", "-q", "-m", mensaje)
     ejecutar("git", "push", "origin", "main")
     print(f"\nPublicado: {programa} {version} se instalará solo en todos los clientes.")
 
