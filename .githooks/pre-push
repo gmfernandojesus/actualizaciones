@@ -1,0 +1,12 @@
+#!/bin/sh
+# Antes de subir nada a GitHub, comprueba que ningún aviso de actualización
+# lleva a un cliente al instalador de otro programa. Si algo falla, la subida
+# se cancela y no llega a ningún cliente.
+cd "$(git rev-parse --show-toplevel)" || exit 1
+PY=python
+command -v python >/dev/null 2>&1 || PY=py
+PYTHONIOENCODING=utf-8 "$PY" comprobar_avisos.py || {
+    echo ""
+    echo "SUBIDA CANCELADA: arregla lo de arriba y vuelve a intentarlo."
+    exit 1
+}

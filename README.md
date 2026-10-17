@@ -25,21 +25,37 @@ Están en la pestaña **[Releases](../../releases)** de este repositorio.
 
 A los clientes les aparece el aviso solos la próxima vez que abran el programa.
 
-## Reglas al publicar (las vigila GitHub solo)
+## Reglas al publicar (las vigila el sistema solo)
 
-Cada vez que se publica algo aquí, y cada mañana, GitHub ejecuta
-`comprobar_avisos.py`. Si algo está mal, **te llega un correo** y la
-publicación sale con una ❌ roja en la pestaña *Actions*.
+Hay tres protecciones para que un cliente que actualiza un programa nunca
+reciba otro:
 
-1. **El `url` de cada aviso apunta al instalador de SU programa**, nunca a
-   `releases/latest`: este repositorio es de varios programas y "latest" es
-   la última Release de cualquiera de ellos.
-   Bien: `.../releases/download/v2026.10.17/Workshop.Tool.-.Instalador.exe`
-2. **Al publicar Workshop Tool, actualizar también el puente** de la 3.0
-   (`version.json` del repo `taller-toro35`) con el mismo contenido que
-   `workshop-tool.json`.
-3. **`revisiones-licencias.txt` no se borra nunca**: sin él, en 30 días todos
-   los clientes pasan a solo lectura.
-4. **Programa nuevo**: añadirlo a `PROGRAMAS` en `comprobar_avisos.py`.
+1. **Dentro de cada programa** (Workshop Tool 3.3+, Chassis Program 5.4+):
+   solo ofrece descargar un archivo si es su propio instalador. Si el aviso
+   estuviera mal, el botón no aparece y le dice que te escriba.
+2. **Antes de cada `git push` desde este ordenador**: `comprobar_avisos.py`
+   se ejecuta solo y, si algo está mal, la subida se cancela.
+3. **En GitHub**, en cada cambio, en cada Release y cada mañana: si algo está
+   mal, te llega un correo.
 
-Para comprobarlo a mano antes de publicar: `python comprobar_avisos.py`
+Las reglas que se comprueban:
+
+- **Cada `<programa>.json` descarga `<Programa>.-.Instalador.exe`**, el de su
+  propio programa, con la dirección directa de la Release
+  (`.../releases/download/<tag>/Workshop.Tool.-.Instalador.exe`). **Nunca
+  `releases/latest`**: este repositorio es de varios programas y "latest" es
+  la última Release de cualquiera de ellos.
+- **Al publicar Workshop Tool, primero el puente** de la 3.0 (`version.json`
+  del repo `taller-toro35`, copia exacta de `workshop-tool.json`) y después
+  este repositorio.
+- **`revisiones-licencias.txt` no se borra nunca**: sin él, en 30 días todos
+  los clientes pasan a solo lectura.
+
+**Programa nuevo:** no hay que apuntarlo en ningún sitio de aquí. Basta con
+que su aviso se llame como el programa (`mi-programa.json`) y su instalador
+`Mi Programa - Instalador.exe`; el comprobador lo deduce del nombre.
+
+**En un ordenador nuevo**, después de clonar este repositorio, activa la
+comprobación antes de subir con: `git config core.hooksPath .githooks`
+
+Para comprobarlo a mano: `python comprobar_avisos.py`
