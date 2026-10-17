@@ -1,6 +1,6 @@
 {
-  "version": "3.0",
-  "fecha": "2026-10-16",
-  "notas": "Facturas con numeracion correlativa, catalogo de productos con codigo de barras, mano de obra por horas, logo configurable, pestana de ayuda y licencias por ordenador.",
+  "version": "3.1",
+  "fecha": "2026-10-17",
+  "notas": "Corregidos dos fallos al poner precios: las piezas elegidas en el desplegable de la fila se quedaban a 0 euros, y los precios escritos con coma (12,50) se perdian al guardar.",
   "url": "https://github.com/gmfernandojesus/actualizaciones/releases/latest"
 }
