@@ -1,6 +1,10 @@
 {
-  "version": "3.3",
+  "producto": "Workshop Tool",
+  "version": "3.4",
   "fecha": "2026-10-17",
-  "notas": "Al actualizar, el programa comprueba que lo que se descarga es su propia actualizacion y nunca otro programa.",
-  "url": "https://github.com/gmfernandojesus/actualizaciones/releases/download/v2026.10.17.4/Workshop.Tool.-.Instalador.exe"
+  "notas": "A partir de esta versión el programa se actualiza solo: descarga la versión nueva por su cuenta y se instala con un clic, o al cerrar el programa.",
+  "url": "https://github.com/gmfernandojesus/actualizaciones/releases/download/workshop-tool-3.4/Workshop.Tool.-.Instalador.exe",
+  "sha256": "ef4057c854251658f0124daad932af5c3509907965da5314ef9be7ed4ab2e093",
+  "tamano": 21691742,
+  "firma": "h1ZFFiDuRvF2NoieQki9LThzj1In9D7-BQy0NU-E8yluddT91Xx5Jl2ACZgOhfAhDVgXHfjUGK12MjvViyv1DA"
 }

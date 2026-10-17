@@ -19,6 +19,7 @@ clientes de Workshop Tool que pulsaban Descargar acababan en el Chassis.
 """
 
 import base64
+import hashlib
 import json
 import re
 import sys
@@ -26,6 +27,7 @@ import urllib.parse
 import urllib.request
 from pathlib import Path
 
+CLAVE_PUBLICA_HEX = "b77a51734fcbd21f490ca354b8831cf3406400c6f374bf895bade3d8a252d98e"
 REPO = "https://github.com/gmfernandojesus/actualizaciones"
 DESCARGAS = f"{REPO}/releases/download/"
 
@@ -57,18 +59,51 @@ def instalador_esperado(aviso):
     return ".".join(p.capitalize() for p in palabras) + ".-.Instalador.exe"
 
 
-def tamano_descarga(url):
-    """Tamaño del archivo que se descarga, o None si no se puede bajar."""
-    peticion = urllib.request.Request(url, headers={"Range": "bytes=0-0"})
+def texto_firmado(producto, datos):
+    """Idéntico a actualizador.texto_firmado en los programas."""
+    return json.dumps(
+        {
+            "tipo": "actualizacion",
+            "producto": producto,
+            "version": str(datos.get("version", "")),
+            "url": str(datos.get("url", "")),
+            "sha256": str(datos.get("sha256", "")).lower(),
+            "tamano": int(datos.get("tamano") or 0),
+        },
+        sort_keys=True,
+        separators=(",", ":"),
+        ensure_ascii=False,
+    ).encode("utf-8")
+
+
+def firma_valida(producto, datos):
+    from cryptography.exceptions import InvalidSignature
+    from cryptography.hazmat.primitives.asymmetric.ed25519 import Ed25519PublicKey
+
+    firma = str(datos.get("firma", ""))
     try:
-        with urllib.request.urlopen(peticion, timeout=30) as r:
-            rango = r.headers.get("Content-Range", "")
-            if "/" in rango:
-                return int(rango.rsplit("/", 1)[1])
-            return int(r.headers.get("Content-Length") or 0)
+        Ed25519PublicKey.from_public_bytes(bytes.fromhex(CLAVE_PUBLICA_HEX)).verify(
+            base64.urlsafe_b64decode(firma + "=" * (-len(firma) % 4)),
+            texto_firmado(producto, datos),
+        )
+        return True
+    except (InvalidSignature, ValueError, TypeError):
+        return False
+
+
+def descargar_y_medir(url):
+    """(tamaño, sha256) de lo que se descarga de verdad, o None."""
+    h = hashlib.sha256()
+    total = 0
+    try:
+        with urllib.request.urlopen(url, timeout=120) as r:
+            for bloque in iter(lambda: r.read(1 << 20), b""):
+                h.update(bloque)
+                total += len(bloque)
     except Exception as e:
         print(f"    (no se pudo descargar: {e})")
         return None
+    return total, h.hexdigest()
 
 
 def comprobar_aviso(aviso):
@@ -96,15 +131,27 @@ def comprobar_aviso(aviso):
         fallo(f"{aviso.name}: el enlace descarga '{archivo}', que es OTRO "
               f"programa. Tiene que descargar '{instalador}'")
     else:
-        tamano = tamano_descarga(url)
-        if tamano is None:
+        producto = str(datos.get("producto", ""))
+        if solo_letras(producto) != solo_letras(aviso.stem):
+            fallo(f"{aviso.name}: el campo 'producto' dice {producto!r}, que no es "
+                  f"este programa. Publica con publicar.py")
+            return
+        if not firma_valida(producto, datos):
+            fallo(f"{aviso.name}: el aviso no está firmado o la firma no vale. Los "
+                  f"programas no se actualizarán solos. Publica con publicar.py")
+            return
+        medido = descargar_y_medir(url)
+        if medido is None:
             fallo(f"{aviso.name}: el instalador no existe o no se puede descargar "
                   f"(¿se borró la Release o el archivo?): {url}")
-        elif tamano < MINIMO_BYTES:
-            fallo(f"{aviso.name}: el instalador pesa {tamano} bytes, demasiado poco")
+        elif medido[0] < MINIMO_BYTES:
+            fallo(f"{aviso.name}: el instalador pesa {medido[0]} bytes, demasiado poco")
+        elif medido != (int(datos.get("tamano") or 0), str(datos.get("sha256", "")).lower()):
+            fallo(f"{aviso.name}: el instalador publicado no es el que se firmó "
+                  f"(tamaño o huella distintos). Los programas no lo instalarán")
         else:
             print(f"  OK  versión {datos['version']} -> {archivo} "
-                  f"({tamano / 1048576:.1f} MB)")
+                  f"({medido[0] / 1048576:.1f} MB, firmado y con huella correcta)")
 
 
 def comprobar_puente(ruta_puente, nombre):

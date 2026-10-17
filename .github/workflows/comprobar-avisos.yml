@@ -15,5 +15,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - run: pip install cryptography
       - name: Comprobar que cada cliente descarga su programa
         run: python3 comprobar_avisos.py

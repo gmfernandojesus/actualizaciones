@@ -1,6 +1,10 @@
 {
-  "version": "5.4",
+  "producto": "Chassis Program",
+  "version": "5.5",
   "fecha": "2026-10-17",
-  "notas": "Al actualizar, el programa comprueba que lo que se descarga es su propia actualizacion y nunca otro programa.",
-  "url": "https://github.com/gmfernandojesus/actualizaciones/releases/download/v2026.10.17.4/Chassis.Program.-.Instalador.exe"
+  "notas": "A partir de esta versión el programa se actualiza solo: descarga la versión nueva por su cuenta y se instala con un clic, o al cerrar el programa.",
+  "url": "https://github.com/gmfernandojesus/actualizaciones/releases/download/chassis-program-5.5/Chassis.Program.-.Instalador.exe",
+  "sha256": "9e1808a3910e1d5052904130df042a052a1f7175b1e23b94f99a1b15b83984af",
+  "tamano": 16716302,
+  "firma": "-HaF9gG5MuR6jRrBU7RPicWeu1RBaIF0cwZ65Wh-a94yurvPf_RLqpViWktlsIRXnZrvEKLhJQUwa3p7Pbz-BA"
 }
