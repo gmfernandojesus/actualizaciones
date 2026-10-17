@@ -1,0 +1,19 @@
+# Comprueba que cada aviso de actualización lleva a su propio programa.
+# Si falla, GitHub manda un correo al dueño del repositorio.
+name: Comprobar avisos de actualizacion
+
+on:
+  push:                     # cada vez que se cambia un aviso
+  release:                  # cada vez que se publica, edita o borra una Release
+    types: [published, edited, deleted]
+  schedule:
+    - cron: "0 6 * * *"     # y cada mañana, por si algo se rompe por fuera
+  workflow_dispatch:        # botón para lanzarlo a mano desde GitHub
+
+jobs:
+  comprobar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Comprobar que cada cliente descarga su programa
+        run: python3 comprobar_avisos.py
