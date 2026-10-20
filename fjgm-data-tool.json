@@ -1,0 +1,10 @@
+{
+  "producto": "FJGM Data Tool",
+  "version": "1.7.0",
+  "fecha": "2026-10-21",
+  "notas": "Sectores propios por metros o tiempo, estudio de dónde se pierde tiempo curva a curva, alineación por GPS más precisa, nuevos canales calculados (marcha, potencia, frenando, a fondo), exportar e importar usuarios y apertura más rápida de sesiones grandes. Desde esta versión el programa se actualiza solo.",
+  "url": "https://github.com/gmfernandojesus/actualizaciones/releases/download/fjgm-data-tool-1.7.0/FJGM.Data.Tool.-.Instalador.exe",
+  "sha256": "b2ab9fb848caacf19cb8ebd1183cef60d091f721017f33f05195b10761f0ad0f",
+  "tamano": 58064109,
+  "firma": "f0Fqn49sfxYbnu2eECV8ZXlyaMWu8ZQXqN3DFrvX1tvA7rIkf0GByOnAyWhHhk8l-wAHovB_Ruq4RJrTTMTkBw"
+}
