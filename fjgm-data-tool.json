@@ -1,10 +1,10 @@
 {
   "producto": "FJGM Data Tool",
-  "version": "1.7.0",
-  "fecha": "2026-10-21",
-  "notas": "Sectores propios por metros o tiempo, estudio de dónde se pierde tiempo curva a curva, alineación por GPS más precisa, nuevos canales calculados (marcha, potencia, frenando, a fondo), exportar e importar usuarios y apertura más rápida de sesiones grandes. Desde esta versión el programa se actualiza solo.",
-  "url": "https://github.com/gmfernandojesus/actualizaciones/releases/download/fjgm-data-tool-1.7.0/FJGM.Data.Tool.-.Instalador.exe",
-  "sha256": "b2ab9fb848caacf19cb8ebd1183cef60d091f721017f33f05195b10761f0ad0f",
-  "tamano": 58064109,
-  "firma": "f0Fqn49sfxYbnu2eECV8ZXlyaMWu8ZQXqN3DFrvX1tvA7rIkf0GByOnAyWhHhk8l-wAHovB_Ruq4RJrTTMTkBw"
+  "version": "1.8.0",
+  "fecha": "2026-10-22",
+  "notas": "Informe PDF para el piloto con mapa, trazadas y gráficas de cada curva donde pierde tiempo; ventana Estudio más clara (tarjetas por curva); el Circuito compara las trazadas de los pilotos y se acerca solo a la curva que estás mirando; nueva pantalla 07 Trazadas.",
+  "url": "https://github.com/gmfernandojesus/actualizaciones/releases/download/fjgm-data-tool-1.8.0/FJGM.Data.Tool.-.Instalador.exe",
+  "sha256": "8f0ca3917ebf3b0c0d79fb7e4d68d4b13fe6394ae485ba015ab6dc17ec4dfce7",
+  "tamano": 66288547,
+  "firma": "HLIcIOjZzpC3KH9JrhwqrZUnv5vLc2tLVa4pZVRl2yzu070I6jBAQQvQez8o9k4BqUKYB0h3Eq9JfXEctErDDA"
 }
