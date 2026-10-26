@@ -1,10 +1,10 @@
 {
   "producto": "FJGM Data Tool",
-  "version": "1.8.1",
-  "fecha": "2026-10-22",
-  "notas": "Al cargar una medición, la lista muestra la vuelta rápida de cada sesión (con un trofeo en la más rápida de cada carpeta) y se puede ordenar por vuelta rápida.",
-  "url": "https://github.com/gmfernandojesus/actualizaciones/releases/download/fjgm-data-tool-1.8.1/FJGM.Data.Tool.-.Instalador.exe",
-  "sha256": "011a774c30bd074e057c4ddb2fe794878cc3724db5e48888ed1f0ee16db66490",
-  "tamano": 66290546,
-  "firma": "Asy7wPqirkk_tJN0qS3gZQToE5bmcL1WCCYpDRW9SCyq6vEEgT4ebpGj0G5XOXq-QhHTrO2QZEJQEpesBLVKCg"
+  "version": "1.9.0",
+  "fecha": "2026-10-26",
+  "notas": "El estudio entre pilotos usa las curvas reales del circuito, detectadas por su forma con el GPS (también las rápidas y cada lado de las chicanes). Nueva ventana Curvas del circuito para ponerles su nombre y corregirlas; se usan en el estudio y en el informe PDF.",
+  "url": "https://github.com/gmfernandojesus/actualizaciones/releases/download/fjgm-data-tool-1.9.0/FJGM.Data.Tool.-.Instalador.exe",
+  "sha256": "7b2aeb335a55d1421c440e04bb151c4f0f8f07a1ce5dc9eb9102239213e8eb91",
+  "tamano": 66302654,
+  "firma": "m3cq2ULBFPfTK3We54D72KTBOtjO301pqNusP9y5IiLWE1G7Rv23_l0TNyksIaxzfiDyA6ogtZKKPOvQ9k0KAw"
 }
