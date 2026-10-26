@@ -1,10 +1,10 @@
 {
   "producto": "FJGM Data Tool",
-  "version": "1.9.0",
+  "version": "1.10.0",
   "fecha": "2026-10-26",
-  "notas": "El estudio entre pilotos usa las curvas reales del circuito, detectadas por su forma con el GPS (también las rápidas y cada lado de las chicanes). Nueva ventana Curvas del circuito para ponerles su nombre y corregirlas; se usan en el estudio y en el informe PDF.",
-  "url": "https://github.com/gmfernandojesus/actualizaciones/releases/download/fjgm-data-tool-1.9.0/FJGM.Data.Tool.-.Instalador.exe",
-  "sha256": "7b2aeb335a55d1421c440e04bb151c4f0f8f07a1ce5dc9eb9102239213e8eb91",
-  "tamano": 66302654,
-  "firma": "m3cq2ULBFPfTK3We54D72KTBOtjO301pqNusP9y5IiLWE1G7Rv23_l0TNyksIaxzfiDyA6ogtZKKPOvQ9k0KAw"
+  "notas": "Comparacion entre pilotos mas fiable: vueltas y GPS de sesiones Marelli corregidos (Jerez, Estoril), delta sin saltos cuando el GPS falla, comparacion de trazadas por curva (radio, punto de cuerda, linea por dentro o por fuera, cual es mejor), informe PDF rehecho (mapa claro, 2 curvas por pagina, se abre al guardarlo) y tarjetas del Estudio que ya no se solapan.",
+  "url": "https://github.com/gmfernandojesus/actualizaciones/releases/download/fjgm-data-tool-1.10.0/FJGM.Data.Tool.-.Instalador.exe",
+  "sha256": "4cb46949c8566b58c64d328aec849816d987d505fcee384547f58b6b04e10d2e",
+  "tamano": 66313614,
+  "firma": "fj8-41YtAmVYpGUOccuqOkPVe6jGIfx3urYBAwDFNn5KpD_VFYe5fM-QPy0rFoAyOccQdguU2Moe4AdGAduSAQ"
 }
