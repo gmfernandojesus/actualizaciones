@@ -1,10 +1,10 @@
 {
   "producto": "FJGM Data Tool",
-  "version": "1.10.0",
+  "version": "1.11.0",
   "fecha": "2026-10-26",
-  "notas": "Comparacion entre pilotos mas fiable: vueltas y GPS de sesiones Marelli corregidos (Jerez, Estoril), delta sin saltos cuando el GPS falla, comparacion de trazadas por curva (radio, punto de cuerda, linea por dentro o por fuera, cual es mejor), informe PDF rehecho (mapa claro, 2 curvas por pagina, se abre al guardarlo) y tarjetas del Estudio que ya no se solapan.",
-  "url": "https://github.com/gmfernandojesus/actualizaciones/releases/download/fjgm-data-tool-1.10.0/FJGM.Data.Tool.-.Instalador.exe",
-  "sha256": "4cb46949c8566b58c64d328aec849816d987d505fcee384547f58b6b04e10d2e",
-  "tamano": 66313614,
-  "firma": "fj8-41YtAmVYpGUOccuqOkPVe6jGIfx3urYBAwDFNn5KpD_VFYe5fM-QPy0rFoAyOccQdguU2Moe4AdGAduSAQ"
+  "notas": "Estudio entre pilotos mucho mas detallado: el tiempo de cada curva se reparte en final de recta, frenada, paso por curva y salida; plan de trabajo de la vuelta ordenado por el tiempo que cuesta; en cada curva se explica que hacer con los numeros de los dos (punto y fuerza de frenada, suelta del freno, tiempo sin gas ni freno, apertura de gas, trazada). Curvas como el trazado oficial: Jerez sale con sus 13 curvas y sus nombres (curvas de doble vertice separadas). Aviso cuando un sensor de freno o gas no tiene senal.",
+  "url": "https://github.com/gmfernandojesus/actualizaciones/releases/download/fjgm-data-tool-1.11.0/FJGM.Data.Tool.-.Instalador.exe",
+  "sha256": "a942354b055233aef84297ff58eaa6670a9445fa1d1d8291bc0800dbf889e12a",
+  "tamano": 66338933,
+  "firma": "V_fvMqNtv_OQlXwhcXOSz868LXZ55f1G00_bN0Lc-iNnnL_HT5AcWt99kKZ5qE90fYm5UIsoORZlPF0BikBYAg"
 }
