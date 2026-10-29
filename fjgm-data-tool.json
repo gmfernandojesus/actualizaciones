@@ -1,10 +1,10 @@
 {
   "producto": "FJGM Data Tool",
-  "version": "1.11.0",
-  "fecha": "2026-10-26",
-  "notas": "Estudio entre pilotos mucho mas detallado: el tiempo de cada curva se reparte en final de recta, frenada, paso por curva y salida; plan de trabajo de la vuelta ordenado por el tiempo que cuesta; en cada curva se explica que hacer con los numeros de los dos (punto y fuerza de frenada, suelta del freno, tiempo sin gas ni freno, apertura de gas, trazada). Curvas como el trazado oficial: Jerez sale con sus 13 curvas y sus nombres (curvas de doble vertice separadas). Aviso cuando un sensor de freno o gas no tiene senal.",
-  "url": "https://github.com/gmfernandojesus/actualizaciones/releases/download/fjgm-data-tool-1.11.0/FJGM.Data.Tool.-.Instalador.exe",
-  "sha256": "a942354b055233aef84297ff58eaa6670a9445fa1d1d8291bc0800dbf889e12a",
-  "tamano": 66338933,
-  "firma": "V_fvMqNtv_OQlXwhcXOSz868LXZ55f1G00_bN0Lc-iNnnL_HT5AcWt99kKZ5qE90fYm5UIsoORZlPF0BikBYAg"
+  "version": "1.11.1",
+  "fecha": "2026-10-29",
+  "notas": "Ahora puedes elegir la vuelta que quieras de cada medicion para compararlas (por ejemplo la vuelta 3 de un piloto con la 7 de otro): al elegir una vuelta solo cambia la medicion seleccionada. Linked sigue moviendo todas juntas con vuelta anterior/siguiente.",
+  "url": "https://github.com/gmfernandojesus/actualizaciones/releases/download/fjgm-data-tool-1.11.1/FJGM.Data.Tool.-.Instalador.exe",
+  "sha256": "3dd16def650336e5d3f60d1612bd1653d9a086efdfdfeae74099250fd4f12f3e",
+  "tamano": 66336272,
+  "firma": "qBDAlxcPsVmNBuaUnTdzXpF2p3yC_nqHETuc8KrEZhQriKFyS07oBNo1DpPdE9YnBZbSUZ59jgFoJ5hF3blYCQ"
 }
